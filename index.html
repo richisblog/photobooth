@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能相机</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="camera-container">
+        <video id="video" autoplay></video>
+        <div id="countdown-display"></div>
+        <div class="controls">
+            <button onclick="burstShot()">连拍4张</button>
+            <button onclick="takePhoto()">拍摄</button>
+            <button onclick="delayedShot()">延迟5秒</button>
+        </div>
+    </div>
+    
+    <div class="gallery" id="gallery">
+        <h2>相册</h2>
+        <div class="thumbnails" id="thumbnails"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
