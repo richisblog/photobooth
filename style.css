@@ -70,3 +70,20 @@ button:hover {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.mirror-control {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.mirror-control button {
+    background: #2196F3;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.mirror-control button:hover {
+    background: #1976D2;
+}

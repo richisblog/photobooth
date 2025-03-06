@@ -21,11 +21,14 @@ function createThumbnail(dataUrl) {
 // 拍照功能
 function takePhoto() {
     const video = document.getElementById('video');
-    const canvas = document.createElement('canvas');
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    canvas.getContext('2d').drawImage(video, 0, 0);
-    createThumbnail(canvas.toDataURL('image/jpeg'));
+    video.style.transform = 'scaleX(-1)';
+    createThumbnail(video.toDataURL('image/jpeg'));
+}
+
+// 镜像切换功能
+function toggleMirror() {
+    const video = document.getElementById('video');
+    video.style.transform = video.style.transform === 'scaleX(-1)' ? 'scaleX(1)' : 'scaleX(-1)';
 }
 
 // 连拍功能
